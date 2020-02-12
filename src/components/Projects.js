@@ -47,7 +47,7 @@ const Projects = () => {
             <div className="col-sm-6 col-md-6"></div>
             <div className="col-sm-5 col-md-6">
                 <button type="button" class="btn btn-primary mr-3">Create a new project</button>
-                <button type="button" class="btn btn-info" onClick={handleClick}>View Locations</button>
+                <button type="button" class="btn btn-secondary" onClick={handleClick}>View Locations</button>
             </div>
         </ActionBar>
             <ProjectWrapper className="row">
@@ -59,9 +59,9 @@ const Projects = () => {
                                 <h5 className="card-title">{project.title}</h5>
                                 {/* <p className="card-text">{project.contractorName}</p>
                                 <p className="card-text">{project.contractorAddress}</p> */}
-                                <p className="card-text">Budget: {currencyFormatter.format(project.budget)}</p>
+                                <p className="card-text"><b>Budget:</b> {currencyFormatter.format(project.budget)}</p>
                                 {/* <a href="#" className="btn btn-primary">Go somewhere</a> */}
-                            <p className="card-text">Duration: {project.startDate } - {project.endDate}</p>
+                            <p className="card-text"><b>Duration:</b> {project.startDate } - {project.endDate}</p>
                             </div>
                         </div>
                     </div>

@@ -9,6 +9,7 @@ import client from './utils/client';
 import LoginUser from './components/LoginUser';
 import Projects from './components/Projects';
 import Locations from './components/Locations';
+import CreateProjects from './components/CreateProjects';
 
 const App = () => {
   return (
@@ -24,6 +25,9 @@ const App = () => {
           </Route>
           <Route path="/locations">
             <Locations />
+          </Route>
+          <Route path="/newproject">
+            <CreateProjects />
           </Route>
         </Switch>
         </div>
