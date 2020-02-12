@@ -6,19 +6,19 @@ import { useMutation } from '@apollo/react-hooks';
 import styled from 'styled-components';
 
 
-const CREATE_PROJECTS = gql`
-{
-    mutation project($project: CreateProjectType!) {
-        createProject(project: $project) {
-            message
-            status
-        }
-    }
-}
-`;
+// const CREATE_PROJECTS = gql`
+// {
+//     mutation project($project: CreateProjectType!) {
+//         createProject(project: $project) {
+//             message
+//             status
+//         }
+//     }
+// }
+// `;
 
 const CreateProjects = () => {
-    const [project, {error, loading}] = useMutation(CREATE_PROJECTS);
+    // const [project, {error, loading}] = useMutation(CREATE_PROJECTS);
     return (
         <div className="row">
             <div className="col-md-2"></div>
