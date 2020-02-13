@@ -17,7 +17,7 @@ const CREATE_PROJECTS = gql`
 `;
 
 const backButton = {
-    marginBottom: '8vh'
+    marginBottom: '5vh'
 }
 const Wrapper = styled.div`
     .form-control:focus {

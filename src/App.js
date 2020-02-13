@@ -10,6 +10,7 @@ import LoginUser from './components/LoginUser';
 import Projects from './components/Projects';
 import Locations from './components/Locations';
 import CreateProjects from './components/CreateProjects';
+import AuthenticatedRoute from './components/AuthenticatedRoute'
 
 const App = () => {
   return (
@@ -20,15 +21,15 @@ const App = () => {
           <Route exact path="/">
             <LoginUser />
           </Route>
-          <Route path="/projects">
+          <AuthenticatedRoute path="/projects">
             <Projects />
-          </Route>
-          <Route path="/locations">
+          </AuthenticatedRoute>
+          <AuthenticatedRoute path="/locations">
             <Locations />
-          </Route>
-          <Route path="/new-project">
+          </AuthenticatedRoute>
+          <AuthenticatedRoute path="/new-project">
             <CreateProjects />
-          </Route>
+          </AuthenticatedRoute>
         </Switch>
         </div>
       </ApolloProvider>
