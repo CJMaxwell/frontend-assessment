@@ -49,7 +49,7 @@ const Projects = () => {
         <ActionBar className="row mt-4">
             <div className="col-sm-6 col-md-6"></div>
             <div className="col-sm-5 col-md-6">
-                <button type="button" className="btn btn-primary mr-3" onClick={handleCreateProject}>Create a new project</button>
+                <button type="button" className="btn btn-info mr-3" onClick={handleCreateProject}>Create a new project</button>
                 <button type="button" className="btn btn-secondary" onClick={handleClick}>View Locations</button>
             </div>
         </ActionBar>

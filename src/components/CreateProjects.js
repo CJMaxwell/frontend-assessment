@@ -19,6 +19,15 @@ const CREATE_PROJECTS = gql`
 const backButton = {
     marginBottom: '8vh'
 }
+const Wrapper = styled.div`
+    .form-control:focus {
+        color: #495057;
+        background-color: #fff;
+        border-color: #6c757d;
+        outline: 0;
+        box-shadow: 0 0 0 1px #6c757d;
+    }
+`;
 
 const CreateProjects = () => {
     const [createProject, {error}] = useMutation(CREATE_PROJECTS);
@@ -28,11 +37,11 @@ const CreateProjects = () => {
     const history = useHistory();
 
     return (
-        <div className="row">
+        <Wrapper className="row">
             <div className="col-md-2">
             </div>
             <div className="col-md-8 mt-5">
-            <button style={backButton} type="button" className="btn btn-secondary" onClick={handleClick}>Back</button>
+            <button style={backButton} type="button" className="btn btn-info" onClick={handleClick}>Back</button>
 
             <Formik
       initialValues={{ contractorName: '', contractorAddress: '',startDate:'',endDate:'',title:'',budget:'' }}
@@ -112,7 +121,7 @@ const CreateProjects = () => {
                         type="text" className="form-control" id="budget" name="budget" placeholder="Project budget" required/>
                     </div>
               </div>
-              <button type="submit" disabled={isSubmitting} className="btn btn-primary btn-lg btn-block">Create Project</button>
+              <button type="submit" disabled={isSubmitting} className="btn btn-secondary btn-lg btn-block">Create Project</button>
 
             </form>
             )}
@@ -120,7 +129,7 @@ const CreateProjects = () => {
             </div>
             <div className="col-md-2"></div>
             
-        </div>
+        </Wrapper>
     )
 }
 
