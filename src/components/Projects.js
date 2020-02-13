@@ -39,6 +39,9 @@ const Projects = () => {
     const handleClick = () => {
         history.push('/locations');
     }
+    const handleCreateProject = () => {
+        history.push('/new-project');
+    }
     
     return (
 
@@ -46,8 +49,8 @@ const Projects = () => {
         <ActionBar className="row mt-4">
             <div className="col-sm-6 col-md-6"></div>
             <div className="col-sm-5 col-md-6">
-                <button type="button" class="btn btn-primary mr-3">Create a new project</button>
-                <button type="button" class="btn btn-secondary" onClick={handleClick}>View Locations</button>
+                <button type="button" className="btn btn-primary mr-3" onClick={handleCreateProject}>Create a new project</button>
+                <button type="button" className="btn btn-secondary" onClick={handleClick}>View Locations</button>
             </div>
         </ActionBar>
             <ProjectWrapper className="row">
