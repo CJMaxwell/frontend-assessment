@@ -61,14 +61,15 @@ const LoginUser = () => {
     return (
         <Wrapper className="row">
             <div className="col-md-4 offset-md-4">
+                <h4 className="text-center mb-3">Hi,Please Sign in</h4>
                 <form onSubmit={handleOnSubmit}>
                     <div className="form-group">
                         <label htmlFor="email">Email address</label>
-                        <input type="email" value={email} onChange={handleEmailChange} className="form-control" id="email" aria-describedby="emailHelp"/>
+                        <input type="email" placeholder="Email Address" value={email} onChange={handleEmailChange} className="form-control" id="email" aria-describedby="emailHelp"/>
                     </div>
                     <div className="form-group">
                         <label htmlFor="password">Password</label>
-                        <input type="password" value={password} onChange={handlePasswordChange} className="form-control" id="password"/>
+                        <input type="password" placeholder="Password" value={password} onChange={handlePasswordChange} className="form-control" id="password"/>
                     </div>
                     <button type="submit" disabled={loading} className="btn btn-outline-secondary btn-lg btn-block">SIGN IN</button>
                 </form>

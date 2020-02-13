@@ -11,11 +11,16 @@ const ProjectWrapper = styled.div`
     padding-top: 5vh;
     .card {
         height: 28vh;
+         transition: box-shadow .3s;
+    }
+    .card:hover {
+        box-shadow: 0 0 11px rgba(33,33,33,.2); 
     }
 `;
 const ActionBar = styled.div`
     padding-top: 5vh;
 `;
+
 
 const LOADPROJECTS = gql`
 {
@@ -63,7 +68,6 @@ const Projects = () => {
                                 {/* <p className="card-text">{project.contractorName}</p>
                                 <p className="card-text">{project.contractorAddress}</p> */}
                                 <p className="card-text"><b>Budget:</b> {currencyFormatter.format(project.budget)}</p>
-                                {/* <a href="#" className="btn btn-primary">Go somewhere</a> */}
                             <p className="card-text"><b>Duration:</b> {project.startDate } - {project.endDate}</p>
                             </div>
                         </div>
