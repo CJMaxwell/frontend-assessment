@@ -58,6 +58,9 @@ const Projects = () => {
                 <button type="button" className="btn btn-secondary" onClick={handleClick}>View Locations</button>
             </div>
         </ActionBar>
+        <ActionBar className="row">
+            <h4 class="col-md-12 text-center">Here is a list of some of our Projects</h4>
+        </ActionBar>
             <ProjectWrapper className="row">
             {
                 data && data.loadProject.map(project => (
